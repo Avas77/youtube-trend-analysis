@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine
 import pandas as pd
 
-# Replace with your actual PostgreSQL credentials
 DB_USER = 'postgres'
 DB_PASS = 'postgres'
 DB_HOST = 'localhost'
