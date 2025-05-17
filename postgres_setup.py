@@ -8,8 +8,11 @@ DB_PORT = '5432'
 DB_NAME = 'youtube_data'
 
 conn_str = f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
-engine = create_engine(conn_str)
 
+def get_engine():
+    return create_engine(conn_str)
+
+engine = get_engine()
 
 df = pd.read_csv('dataset/trending_videos_US_20250511_100254.csv')
 # Ensure correct column types for PostgreSQL
