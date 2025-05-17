@@ -41,7 +41,7 @@ df = pd.DataFrame(video_data)
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 filename = f"trending_videos_{REGION}_{timestamp}.csv"
-df.to_csv(filename, index=False)
+df.to_csv(f"dataset/{filename}", index=False)
 
 print(f"Data saved to {filename}")
 
