@@ -1,18 +1,18 @@
 from googleapiclient.discovery import build
 import pandas as pd
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
-# --- CONFIGURATION ---
-API_KEY = 'AIzaSyCmBl5YX200cdYkxKjy7QOhzq13GFeNugY'
-REGION = 'US'  # Change as needed
-MAX_RESULTS = 50  # API max per call
+API_KEY = os.getenv('YOUTUBE_API_KEY')
+REGION = 'US'
+MAX_RESULTS = 50
 OUTPUT_FORMAT = 'csv'
 
-# --- YOUTUBE API CLIENT ---
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
-# --- API CALL ---
 request = youtube.videos().list(
     part="snippet,statistics",
     chart="mostPopular",
