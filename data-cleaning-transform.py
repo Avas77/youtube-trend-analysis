@@ -6,18 +6,12 @@
 
 from sqlalchemy import create_engine
 import pandas as pd
-
-DB_USER = 'postgres'
-DB_PASS = 'postgres'
-DB_HOST = 'localhost'
-DB_PORT = '5432'
-DB_NAME = 'youtube_data'
-
+from postgres_setup import get_engine
 
 # In[8]:
 
 
-engine = create_engine(f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
+engine = get_engine()
 
 
 # In[11]:
