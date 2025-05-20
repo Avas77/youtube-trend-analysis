@@ -2,7 +2,7 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 from video_analysis import (load_data, get_filtered_df, get_top_channels_views, get_average_views_per_channel,
-                            get_hourly_distribution, get_engagement_by_day, extract_time_features)
+                            get_hourly_distribution, get_engagement_by_day, extract_time_features, get_correlation)
 
 df = load_data()
 
@@ -48,6 +48,11 @@ st.subheader("📆 Which Days Have Higher Engagement?")
 engagement_by_day = get_engagement_by_day(transformed_df)
 print(engagement_by_day)
 st.bar_chart(engagement_by_day)
+
+st.subheader("📈 Correlation Analysis")
+fig, ax = plt.subplots()
+sns.heatmap(get_correlation(filtered_df), annot=True, cmap="coolwarm", fmt=".2f", ax=ax)
+st.pyplot(fig)
 
 # Footer
 st.caption("Built with 💙 by Avas | Data from YouTube API")

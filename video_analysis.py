@@ -31,3 +31,6 @@ def get_hourly_distribution(df):
 def get_engagement_by_day(df):
     df['engagement'] = (df['comment_count'] + df['like_count']) / df['view_count']
     return df.groupby('day_of_week')['engagement'].mean().sort_values(ascending=False)
+
+def get_correlation(df):
+    return df[["view_count", "like_count", "comment_count", "engagement_percent"]].corr()

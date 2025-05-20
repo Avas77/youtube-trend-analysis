@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Go to your project directory
-cd "$(dirname "$0")"
+cd /home/avas/avas/youtube-pipeline
 
 # Run your scripts
 python3 youtube_data_ingestion.py
