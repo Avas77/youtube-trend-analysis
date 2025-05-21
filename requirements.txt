@@ -6,4 +6,4 @@ matplotlib
 numpy
 dotenv
 google-api-python-client
-psycopg2
+psycopg2-binary
