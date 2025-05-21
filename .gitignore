@@ -1,4 +1,3 @@
 .venv
-/dataset
 .env
 pipeline_log.txt
