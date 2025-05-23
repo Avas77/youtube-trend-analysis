@@ -132,8 +132,13 @@ youtube-trending-pipeline/
 - **Dashboard**: Interactive Streamlit app at `http://localhost:8501` (default).
 
 ## Example Visualizations
-![Top 10 Trending Videos](outputs/charts/top_videos.png)
-![Category Trends](outputs/charts/category_trends.png)
+**Top 10 Trending Videos**
+
+![Top 10 Trending Videos](output/charts/top-ten-channel.png)
+
+**Video and Age Distribution**
+
+![Video and Age Distribution](output/charts/video-age-distribution.png)
 
 ## Future Improvements
 - Add support for multiple regions using the `regionCode` API parameter.
